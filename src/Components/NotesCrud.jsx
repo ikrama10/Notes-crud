@@ -23,8 +23,6 @@ const NotesCrud = () => {
   useEffect(() => {
     localStorage.setItem("notes", JSON.stringify(fetchedNotes));
   }, [fetchedNotes]);
-
- 
   useLayoutEffect(() => {
     document.body.style.backgroundColor = "#c8d8e4"
 });
