@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import {
   faPenToSquare,
   faTrashCan,
-  faCheck,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -26,22 +25,19 @@ const Note = ({ id, note, setFetcheNotes, fetchedNotes }) => {
       });
     });
   };
-
   useEffect(() => {
     setNewNote(note);
   }, [note]);
-
   const handleDel = (noteId) => {
     const updatedNote = fetchedNotes.filter(
       (note, index) => noteId !== index + 1
     );
     setFetcheNotes(updatedNote);
   };
-
   return (
     <>
       <div
-         className=" min-h-[380px] w-[30%] bg-white box-border rounded-lg shadow-lg overflow-hidden mt-10 "
+         className=" min-h-[380px] w-[30%] bg-white box-border rounded  shadow-xl overflow-hidden mt-10 "
       >
         <div className="bg-[#52ab98] p-3 text-white font-semibold flex justify-end">
 

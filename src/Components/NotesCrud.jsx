@@ -23,6 +23,7 @@ const NotesCrud = () => {
   useEffect(() => {
     localStorage.setItem("notes", JSON.stringify(fetchedNotes));
   }, [fetchedNotes]);
+  
   useLayoutEffect(() => {
     document.body.style.backgroundColor = "#c8d8e4"
 });
@@ -34,7 +35,7 @@ const NotesCrud = () => {
         </h1>
       <div className="flex flex-col pt-4  items-center justify-center">
         <button
-          className="bg-[#52ab98] text-white px-6 py-2 rounded-md my-6 hover:bg-[#31665b ] shadow-lg font-semibold cursor-pointer transition-all duration-100"
+          className="bg-[#52ab98] text-white px-4 py-2 rounded-md my-6 hover:bg-[#31665b] shadow-lg font-semibold cursor-pointer transition-all duration-100"
           onClick={handleAddNote}
         >
           + Add note
